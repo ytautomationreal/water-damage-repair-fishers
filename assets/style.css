@@ -137,9 +137,9 @@ nav.main a:hover{color:var(--accent-d);text-decoration:none}
 .ba-pane ul{list-style:none}
 .ba-pane li{padding:8px 0 8px 26px;position:relative;font-size:15.5px;color:var(--ink2);border-bottom:1px dashed var(--line)}
 .ba-pane li:last-child{border-bottom:none}
-.ba-pane li::before{position:absolute;left:0;top:8px;font-weight:800}
-.ba-pane.bad li::before{content:"✕";color:var(--red)}
-.ba-pane.good li::before{content:"✓";color:var(--ok)}
+.ba-pane li::before{content:"";position:absolute;left:0;top:11px;width:14px;height:14px;background-size:contain;background-repeat:no-repeat}
+.ba-pane.bad li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C2261B' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M5 5l14 14M19 5L5 19'/%3E%3C/svg%3E")}
+.ba-pane.good li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E7A4F' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5 9.5 18 20 6.5'/%3E%3C/svg%3E")}
 @media(max-width:720px){.ba-head{grid-template-columns:1fr}.ba-pane.bad{border-right:none;border-bottom:1px solid var(--line)}}
 /* checklist */
 .checks{list-style:none;display:grid;gap:12px}
@@ -269,4 +269,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;font-si
 .vband p{color:#d9e7f1;max-width:660px;margin:14px auto 26px;font-size:17px}
 @media(max-width:620px){.vband .vin{padding:64px 0}}
 @media (prefers-reduced-motion: reduce){.hero-photo .hero-bg img{animation:none}.card{transition:none}}
+.callbar a{display:flex;align-items:center;justify-content:center}
+.callbar a svg{width:17px;height:17px;stroke:#fff;flex:none}
+.starsvg{display:inline-flex;gap:2px}
+.starsvg svg{display:block}
+.logo .mark svg{display:block;width:100%;height:100%}
 @media(max-width:760px){.ba-videos{grid-template-columns:1fr}}
