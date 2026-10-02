@@ -18,6 +18,8 @@
     requestAnimationFrame(tick);
   })},{threshold:.4});
   document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+  // reduced motion: don't autoplay ambient video
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}
   // faq
   document.querySelectorAll('.faq-item').forEach(function(item){
     var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
