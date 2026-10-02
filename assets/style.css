@@ -224,4 +224,24 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;font-si
 .ba-tag.good{background:var(--accent)}
 .ba-card figcaption{padding:13px 15px;font-size:14.5px;color:var(--mut)}
 .ba-card figcaption strong{color:var(--ink)}
+/* brand media upgrade */
+.hero-card .himg{margin:-22px -22px 16px;border-radius:18px 18px 0 0;overflow:hidden}
+.hero-card .himg img{width:100%;display:block;aspect-ratio:16/8.2;object-fit:cover}
+.svc-card{padding:0;overflow:hidden}
+.svc-card .thumb{overflow:hidden}
+.svc-card .thumb img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;transition:transform .5s ease}
+.svc-card:hover .thumb img{transform:scale(1.04)}
+.svc-body{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
+.svc-body .more{margin-top:auto;padding-top:14px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.gal{margin:0;border:1px solid var(--line);background:#fff;overflow:hidden}
+.gal img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
+.gal:hover img{transform:scale(1.045)}
+.gal figcaption{padding:11px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line2)}
+.gal figcaption b{color:var(--ink)}
+.band{position:relative;margin:0}
+.band img{width:100%;height:300px;object-fit:cover;display:block}
+.band figcaption{position:absolute;left:0;bottom:0;background:rgba(11,28,44,.88);color:#fff;font-size:13.5px;padding:9px 14px;max-width:660px}
+@media(max-width:920px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.gallery{grid-template-columns:1fr}.band img{height:200px}.band figcaption{position:static;max-width:none}}
 @media(max-width:760px){.ba-videos{grid-template-columns:1fr}}
